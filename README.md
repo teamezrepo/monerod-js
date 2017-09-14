@@ -26,12 +26,12 @@ The test's default daemon is `localhost:18081`. Some tests may fail if your daem
 
 ## Usage
 
-### Example (Javascript)
+### Example
 
 ```javascript
 const { MoneroDaemon } = require("monerod-js");
 
-var monerod = new MoneroDaemon("monero.whattheserver.me", 8081);
+var monerod = new MoneroDaemon();
 
 monerod.getBlockCount().then((result) => {
     console.log("Block count: " + result.count);
