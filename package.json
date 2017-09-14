@@ -10,10 +10,10 @@
     "@types/node": "^7.0.5",
     "jasmine": "^2.5.3"
   },
-  "author": "cryptoshrimpi",
+  "author": "Burtonium",
   "repository" :
   { "type" : "git"
-  , "url" : "https://github.com/cryptoshrimpi/monerod-js.git"
+  , "url" : "https://github.com/teamezrepo/monerod-js.git"
   },
   "license": "MIT"
 }

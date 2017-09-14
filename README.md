@@ -2,15 +2,15 @@
 
 Monerod-js is a NodeJS RPC Client for Monero Daemon. 
 
-It is written in Typescript and transpiled to Javascript. I recommend you to use Typescript as I typed all the return values to make life easier.
-
 The official Monero Daemon RPC documentation can be found [here](https://getmonero.org/knowledge-base/developer-guides/daemon-rpc).
 
 Developed for / Last tested with Monerod v0.10.3.1.
 
+This repository is a fork of https://github.com/cryptoshrimpi/monerod-js.
+
 ## Install
 ```
-npm install cryptoshrimpi/monerod-js
+npm install monerod-js
 ```
 
 ## Test
@@ -22,30 +22,16 @@ npm install
 npm test
 ```
 
-The test's default daemon is `monero.whattheserver.me:8081`. In order to use your local node please edit `test.spec.ts` or `test.spec.js`. Some tests may fail if your daemon is configured to restrict access to certain RPC calls.
+The test's default daemon is `localhost:18081`. Some tests may fail if your daemon is configured to restrict access to certain RPC calls.
 
 ## Usage
-
-### Example (Typescript)
-
-```typescript
-import { MoneroDaemon } from "node_modules/monerod-js/lib/ts/monerod-js";
-
-var monerod = new MoneroDaemon("monero.whattheserver.me", 8081);
-
-monerod.getBlockCount().then((result) => {
-    console.log("Block count: " + result.count);
-}).catch((f) => {
-    console.log("Something went wrong: " + f);
-});
-```
 
 ### Example (Javascript)
 
 ```javascript
-const m = require("./node_modules/monerod-js/lib/js/monerod-js");
+const { MoneroDaemon } = require("monerod-js");
 
-var monerod = new m.MoneroDaemon("monero.whattheserver.me", 8081);
+var monerod = new MoneroDaemon("monero.whattheserver.me", 8081);
 
 monerod.getBlockCount().then((result) => {
     console.log("Block count: " + result.count);
@@ -61,8 +47,6 @@ node example.js
 ```
 
 ### Available methods
-Please see [monerod-js.ts](lib/ts/monerod-js.ts) for a list of the specific return values of each method.
-
 
 ```
 getBlockCount()
@@ -105,7 +89,7 @@ getFeeEstimate()
 ```
 
 ## Beer
-Thanks in advance if you wanna tip me with a beer :-)
+Tip cryptoshrimpi, the original developer, a beer.
 
 Monero: ```4ATwquCmjnUTuDcF2Yce4YMLexuyFMKF96W7gEA6QU8S5pffgFDi9i29R8yyvHq1MzBVNVXZXUuEtdqpgVRC2hTc7Vtuahu```
 
